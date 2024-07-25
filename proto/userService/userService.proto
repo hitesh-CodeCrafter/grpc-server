@@ -1,0 +1,57 @@
+syntax = "proto3";
+
+option go_package = "./";
+
+
+package user_management;
+
+service UserService {
+  // Retrieve a user by their ID
+  rpc RetrieveUserById (GetUserRequest) returns (UserResponse) {}
+
+  // Retrieve multiple users by their IDs
+  rpc RetrieveUsersByIds (GetUsersRequest) returns (GetUsersResponse) {}
+
+  // Search for users based on specific criteria
+  rpc SearchUsers (SearchUsersRequest) returns (SearchUsersResponse) {}
+}
+
+// Represents the user information
+message UserResponse {
+  int32 id = 1;        // User ID
+  string full_name = 2;     // User full name
+  string city = 3;      // User city
+  int64 phone = 4; // User phone number
+  double height = 5;       // User height
+  bool is_married = 6;      // User marital status
+}
+
+// Request message for retrieving a user by ID
+message GetUserRequest {
+  int32 id = 1;  // The ID of the user to retrieve
+}
+
+// Request message for retrieving multiple users by their IDs
+message GetUsersRequest {
+  repeated int32 ids = 1;  // List of user IDs to retrieve
+}
+
+// Response message for retrieving multiple users
+message GetUsersResponse {
+  repeated UserResponse users = 1;  // List of user responses
+}
+
+// Request message for searching users based on specific criteria
+message SearchUsersRequest {
+  string full_name = 1;      // Filter by full name
+  string city = 2;       // Filter by city
+  int64 phone = 3;  // Filter by phone number
+  double minHeight = 4;    // Filter by minimum height
+  double maxHeight = 5;    // Filter by maximum height
+  bool is_married = 6; // Filter by marital status (optional)
+}
+
+// Response message for searching users based on specific criteria
+message SearchUsersResponse {
+  repeated UserResponse users = 1;  // List of user responses matching the search criteria
+}
