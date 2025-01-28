@@ -1,10 +1,10 @@
 # assignment-totality-corp
 
-This repository hosts a gRPC server project for Totality Corp.
+This repository hosts a gRPC server project.
 
 ## Overview
 
-This project exemplifies a gRPC server setup tailored for a Totality Corp assignment. It showcases the process of creating and operating a gRPC server using Go, with guidance for deployment in both Docker and non-Docker environments.
+This project exemplifies a gRPC server setup. It showcases the process of creating and operating a gRPC server using Go, with guidance for deployment in both Docker and non-Docker environments.
 
 ## Features
 
