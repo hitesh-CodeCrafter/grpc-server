@@ -1,4 +1,4 @@
-# assignment-totality-corp
+# Project
 
 This repository hosts a gRPC server project.
 
