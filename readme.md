@@ -10,7 +10,7 @@ This project exemplifies a gRPC server setup. It showcases the process of creati
 
 - Developed a gRPC server using Go
 - Configured to run on port 8080 by default
-- Includes multiple gRPC services and endpoints as specified in the assignment
+- Includes multiple gRPC services and endpoints.
 
 ## Prerequisites
 
